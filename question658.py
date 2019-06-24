@@ -12,27 +12,27 @@ class Solution(object):
             low = 0
             high = 0
         while low + high != k:
-	        if(array[k-low] - x) <  (array[k+high] - x):
-		        closest.append(array[k-low])
+	        if(arr[k-low] - x) <  (arr[k+high] - x):
+		        closest.append(arr[k-low])
 		        low +=1
-	        elif (array[k+high] - x) < (array[k-low] - x):
-		        closest.append(array[k + high])
+	        elif (arr[k+high] - x) < (arr[k-low] - x):
+		        closest.append(arr[k + high])
 		        high +=1
-	        elif (array[k + high] - x) == (array[k-low] - x):
-		        closest.append(array[k - low])
+	        elif (arr[k + high] - x) == (arr[k-low] - x):
+		        closest.append(arr[k - low])
                 low +=1  
         closest.sort()
         return closest
 
                        
     def binarysearch(self,arr,x,begindex, endindex):
-	mid = (begindex + endindex)/2
-    if x == arr[mid] or array[mid] - x < array[mid+1] - x or array[mid] - x < array[mid-1] - x:
-            return index
-    elif x > arr[mid]:
-	        binarysearch(x, mid, endindex)
-    elif x < arr[mid]:
-	        binarysearch(x, beginindex,mid)
+        mid = (begindex + endindex)/2
+        if x == arr[mid] or arr[mid] - x < arr[mid+1] - x or arr[mid] - x < arr[mid-1] - x:
+                return index
+        elif x > arr[mid]:
+                binarysearch(x, mid, endindex)
+        elif x < arr[mid]:
+                binarysearch(x, beginindex,mid)
 
             
         
